@@ -92,7 +92,7 @@ export default function Home() {
         
       // fifth query
           await axios
-          .post("https://mobilicis-task-backend.vercel.app/",{
+          .post("https://mobilicis-task-backend.vercel.app/aggr",{
             "aggregate": "collection",
             "pipeline": [
               { "$group": { "_id": "$city", "count": { "$sum": 1 }, "avg_income": { "$avg": { "$toDouble": { "$substr": ["$income", 1, -1] } } }  } },
@@ -101,6 +101,8 @@ export default function Home() {
             ]
           })
           .then((x) => {
+            console.log("Hello 5");
+            console.log(x.data);
             setQuery5(x.data)
             
           });
@@ -132,7 +134,7 @@ export default function Home() {
         <h1 > Users which have income lower than $5 USD and have a car of brand “BMW” or “Mercedes”.</h1>
         <Tables tableData={query1} cols={columns}/>
       <br />
-      <h1 >. Male Users which have phone price greater than 10,000.</h1>
+      <h1 >Male Users which have phone price greater than 10,000.</h1>
         <Tables tableData={query2} cols={columns}/>
 
         <br />
