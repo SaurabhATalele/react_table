@@ -17,7 +17,7 @@ this project has used the following libraries
  
  The data is sent using the component props to the table and the table is rendered using the `react-table` library.
  
- ###Screenshots
+ ### Screenshots
  
  Loading Screen
  ![image](https://user-images.githubusercontent.com/75177599/234126371-e20c1732-fc18-4175-885a-a6e9583167b7.png)
