@@ -26,6 +26,7 @@ const Tables = ({tableData,cols}) => {
                     {column.render("Header")}
                   </th>
                 ))}
+                <th>Action</th>
               </tr>
             ))}
           </thead>
@@ -37,6 +38,7 @@ const Tables = ({tableData,cols}) => {
                   {row.cells.map((cell) => (
                     <td {...cell.getCellProps()}> {cell.render("Cell")} </td>
                   ))}
+                  <td><button>View</button></td>
                 </tr>
               );
             })}

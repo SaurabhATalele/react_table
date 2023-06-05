@@ -4,26 +4,21 @@ body {
 }
 body {
   margin: 0;
-  background: -webkit-linear-gradient(45deg, #49a09d, #5f2c82);
-  background: linear-gradient(45deg, #49a09d, #5f2c82);
+
   font-family: sans-serif;
   font-weight: 100;
 }
 .container {
-  position: absolute;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  top: 50%;
-  left: 50%;
-  max-height: 800px;
-  overflow-y: scroll;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  justify-content: center;
+  
 }
 table {
-  width: 800px;
-  height: 800px;
+
   border-collapse: collapse;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -31,15 +26,12 @@ table {
 th,
 td {
   padding: 15px;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
+  color: #252525;
 }
 th {
   text-align: left;
 }
-thead th {
-  background-color: #55608f;
-}
+
 tbody tr:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
@@ -61,4 +53,26 @@ tbody td:hover:before {
 h1{
   color: white;
   text-align: center;
+}
+
+tr:nth-child(even){
+  background-color: #FFBE7B;
+}
+tr:nth-child(odd){
+  background-color:#EED971 ;
+}
+
+th{
+  background-color: #FFA351;
+  color: beige;
+}
+
+button{
+  width: 150px;
+  height: 30px;
+  background-color: #252525;
+  border:none;
+  color:white;
+  border-radius: 5px;
+  cursor: pointer;
 }
