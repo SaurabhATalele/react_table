@@ -3,8 +3,8 @@
 ## to run the code
 run the following command
 
-"npm install"
+`npm install`
 
 then run
 
-"npm start"
+`npm start`
